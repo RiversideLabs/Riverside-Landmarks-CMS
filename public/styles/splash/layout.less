@@ -1,0 +1,201 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,500);
+
+/* background setup */
+.background {
+  background-repeat:no-repeat;
+  /* custom background-position */
+  background-position:50% 50%;
+  /* ie8- graceful degradation */
+  background-position:50% 50%\9 !important;
+}
+
+/* fullscreen setup */
+html, body {
+  /* give this to all tags from html to .fullscreen */
+  height:100%;
+}
+.fullscreen,
+.content-a {
+  width:100%;
+  min-height:100%;
+}
+.not-fullscreen,
+.not-fullscreen .content-a,
+.fullscreen.not-overflow,
+.fullscreen.not-overflow .content-a {
+  height:100%;
+    overflow:hidden;
+}
+
+/* content centering styles */
+.content-a {
+  display:table;
+}
+.content-b {
+  display:table-cell;
+  position:relative;
+  vertical-align:middle;
+  text-align:center;
+}
+.not-fullscreen {
+  height:50%;
+}
+
+
+/* visual styles */
+body.splash {
+  background: url(../images/splash/bg-mask.svg) center center #282828;
+  background-size: auto auto;
+  margin:0;
+  color:#ffffff;
+  text-align:center;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  
+  .logo {
+    background: url(../images/splash/logo.svg);
+    background-size: cover;
+    width: 280px;
+    height: 46px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 10;
+  }
+  
+  .bottom {
+    position: relative;
+    margin-bottom: 20px;
+    color: #757474;
+    font-size: 14px;
+    z-index: 10;
+    text-align: center;
+    
+    a {
+      color: #e1e4e6;
+    }
+    
+    .left {
+      margin-bottom: 15px;
+    }
+    .right {
+      
+    }
+  }
+  
+  .handcrafted-by-maven {
+    line-height: 36px;
+    
+    .maven {
+      border: 0;
+      font: 0/0 a;
+      text-shadow: none;
+      color: transparent;
+      background: url(../images/splash/maven.svg);
+      background-size: 36px 36px;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+  
+  .phone {
+    background: url(../images/splash/phone.png);
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 265px;
+    margin-left: -(400px / 2);
+    margin-top: -(265px / 2);
+    z-index: 5;
+  }
+  .content {
+    position: relative;
+    margin: 80px 20px 0;
+    max-width: 500px;
+    z-index: 10;
+  }
+  h1 {
+    font-size: 48px;
+    line-height: 1em;
+    margin-top: 0;
+    
+    span {
+      font-size: 36px;
+      display: block;
+      font-weight: 300;
+    }
+  }
+  p {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.4em;
+  }
+  
+}
+
+@media (min-width: @screen-sm-min) {
+  body.splash {
+    .logo {
+      width: 321px;
+      height: 53px;
+      left: 45px;
+      top: 40px;
+    }
+    
+    .bottom {
+      position: absolute;
+      height: 40px;
+      left: 45px;
+      right: 45px;
+      bottom: 40px;
+      font-size: 18px;
+      margin: 0;
+      
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+    }
+    
+    .handcrafted-by-maven {
+      line-height: 36px;
+      
+      .maven {
+        background-size: 36px 36px;
+        width: 36px;
+        height: 36px;
+        margin-left: 10px;
+      }
+    }
+    
+    .phone {
+      width: 964px;
+      height: 638px;
+      margin-left: -(964px / 2);
+      margin-top: -(638px / 2);
+    }
+    .content {
+      margin: 0 auto;
+      max-width: 500px;
+    }
+    h1 {
+      font-size: 68px;
+      
+      span {
+        font-size: 42px;
+      }
+    }
+    p {
+      margin-top: 30px;
+      font-size: 18px;
+    }
+  }
+  
+}

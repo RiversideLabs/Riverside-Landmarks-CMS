@@ -1,19 +1,24 @@
-extends ../layouts/default
+extends ../layouts/splash
 
 block content
-	.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://getlandmarkproject.com', target='_blank'>LandmarkJS</a> website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://getlandmarkproject.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
-		hr
-		if user && user.canAccessLandmark
-			p
-				a(href='/landmark/signin').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p
-				a(href='/landmark/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
+	.logo
+	.fullscreen
+		.content-a
+			.content-b
+				.phone
+				.content
+					h1
+						| Discover 
+						span the history all around you.
+					p Introducing an app that features all of the historic landmarks in the City of Riverside, California.
+					p
+						a(href='#', target='_blank')
+							img(src='/images/splash/app-store.svg', width=200)
+	.bottom
+		.left
+			| A Product of 
+			a(href='http://github.com/RiversideLabs', target='_blank') Riverside Labs
+		.right
+			.handcrafted-by-maven
+				| Handcrafted by 
+				a.maven(href='http://maven20.com', target='_blank') Maven
